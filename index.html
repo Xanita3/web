@@ -9,21 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --c1: #6F88AE;
-      --c2: #756FAE;
-      --c3: #956FAE;
-      --c1-rgb: 111,136,174;
-      --c2-rgb: 117,111,174;
-      --c3-rgb: 149,111,174;
+      --c1: #38CFFF;
+      --c2: #A855F7;
+      --c3: #F43FBF;
+      --c1-rgb: 56,207,255;
+      --c2-rgb: 168,85,247;
+      --c3-rgb: 244,63,191;
       --grad: linear-gradient(135deg, var(--c1) 0%, var(--c2) 50%, var(--c3) 100%);
-      --grad-soft: linear-gradient(135deg, rgba(111,136,174,.12), rgba(149,111,174,.12));
-      --bg:    #09090f;
-      --bg2:   #0f0f18;
-      --surf:  #141420;
-      --surf2: #1a1a2a;
-      --brd:   rgba(255,255,255,.07);
-      --text:  #eaeaf5;
-      --muted: #7f80a0;
+      --grad-soft: linear-gradient(135deg, rgba(56,207,255,.12), rgba(244,63,191,.12));
+      --bg:    #07070e;
+      --bg2:   #0c0c18;
+      --surf:  #111120;
+      --surf2: #181830;
+      --brd:   rgba(255,255,255,.09);
+      --text:  #f0f0ff;
+      --muted: #8880aa;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -59,8 +59,8 @@
     .hero-glow {
       position:absolute;inset:0;pointer-events:none;
       background:
-        radial-gradient(ellipse 55% 70% at 85% 50%, rgba(var(--c3-rgb),.1), transparent 70%),
-        radial-gradient(ellipse 45% 55% at 15% 70%, rgba(var(--c1-rgb),.08), transparent 70%);
+        radial-gradient(ellipse 55% 70% at 85% 50%, rgba(var(--c3-rgb),.22), transparent 70%),
+        radial-gradient(ellipse 45% 55% at 15% 70%, rgba(var(--c1-rgb),.18), transparent 70%);
     }
     .hero-grid {
       position:absolute;inset:0;
@@ -72,7 +72,7 @@
     .badge {
       display:inline-flex;align-items:center;gap:.5rem;
       font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--c3);
-      padding:.3rem 1rem;border:1px solid rgba(var(--c3-rgb),.35);border-radius:2rem;
+      padding:.3rem 1rem;border:1px solid rgba(var(--c3-rgb),.6);border-radius:2rem;
       margin-bottom:1.8rem;animation:up .8s ease both;
     }
     .badge-dot { width:6px;height:6px;border-radius:50%;background:var(--c3);animation:pulse 2s infinite; }
@@ -130,7 +130,7 @@
     .timeline { position:relative;max-width:820px; }
     .timeline::before { content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--c1) 15%,var(--c2) 50%,var(--c3) 85%,transparent); }
     .tl { padding:0 0 2.8rem 2.6rem;position:relative; }
-    .tl::before { content:'';position:absolute;left:-5px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--grad);box-shadow:0 0 12px rgba(var(--c2-rgb),.6); }
+    .tl::before { content:'';position:absolute;left:-5px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--grad);box-shadow:0 0 18px rgba(var(--c2-rgb),.9); }
     .tl-period { font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--c3);margin-bottom:.4rem; }
     .tl-title { font-family:'Playfair Display',serif;font-size:1.28rem;font-weight:500;margin-bottom:.22rem; }
     .tl-co { font-size:.82rem;color:var(--c1);font-weight:600;letter-spacing:.04em;margin-bottom:.7rem; }
@@ -151,7 +151,7 @@
     }
     .proj-card::before { content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .4s; }
     .proj-card:hover::before { transform:scaleX(1); }
-    .proj-card:hover { transform:translateY(-5px);border-color:rgba(var(--c2-rgb),.4);box-shadow:0 18px 48px rgba(var(--c2-rgb),.12); }
+    .proj-card:hover { transform:translateY(-5px);border-color:rgba(var(--c2-rgb),.4);box-shadow:0 18px 48px rgba(var(--c2-rgb),.2); }
     .proj-ico { width:44px;height:44px;border-radius:.7rem;font-size:1.3rem;display:flex;align-items:center;justify-content:center;background:var(--grad-soft);border:1px solid var(--brd);margin-bottom:1.1rem; }
     .proj-title { font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:500;margin-bottom:.5rem; }
     .proj-desc { font-size:.82rem;line-height:1.65;color:var(--muted);margin-bottom:1rem; }
@@ -282,7 +282,7 @@
       <span class="stat-l">En la Contraloría General</span>
     </div>
     <div class="stat rv">
-      <span class="stat-n" style="-webkit-text-fill-color:unset">650 m³</span>
+      <span class="stat-n" style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent">650 m³</span>
       <span class="stat-l">Embarcación naval diseñada</span>
     </div>
     <div class="stat rv">
@@ -522,9 +522,9 @@
       Abierta a nuevas oportunidades en el sector público y privado.
     </p>
     <div class="contact-links rv">
-      <a href="mailto:abailon06@gmail.com" class="clink">
+      <a href="/cdn-cgi/l/email-protection#97f6f5f6fefbf8f9a7a1d7f0faf6fefbb9f4f8fa" class="clink">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        abailon06@gmail.com
+        <span class="__cf_email__" data-cfemail="11707370787d7e7f212751767c70787d3f727e7c">[email&#160;protected]</span>
       </a>
       <a href="tel:+51995455163" class="clink">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.74-.74a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -544,7 +544,7 @@
   <div class="fg">CIP 210715 · Auditora Especialista en Gestión</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Cursor
   const cur = document.getElementById('cur');
   const curR = document.getElementById('curR');
@@ -584,14 +584,3 @@
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.querySelectorAll('[data-target]').forEach(n => {
-          counter(n, +n.dataset.target, n.dataset.suffix || '');
-        });
-        sObs.disconnect();
-      }
-    });
-  }, { threshold: 0.4 });
-  const sg = document.querySelector('.stats');
-  if (sg) sObs.observe(sg);
-</script>
-</body>
-</html>
